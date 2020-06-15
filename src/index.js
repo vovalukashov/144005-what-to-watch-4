@@ -2,13 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
 
-const data = {
-  name: `Сияние`,
-  genre: `ужасы, триллер, драма, детектив`,
-  releaseDate: `1980`,
+const films = {
+  names: [`Сияние`, `Берегись автомобиля`, `Солярис`]
 };
 
 ReactDOM.render(
-    <App name={data.name} genre={data.genre} releaseDate={data.releaseDate} />,
+    <App names={films.names} />,
     document.querySelector(`#root`)
 );

@@ -1,12 +1,15 @@
 import React from "react";
 import Main from "../main/main.jsx";
+import PropTypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
-const App = ({name, genre, releaseDate}) => {
-
+const App = ({names}) => {
   return (
-    <Main name={name} genre={genre} releaseDate={releaseDate}/>
+    <Main names={names}/>
   );
+};
+
+App.propTypes = {
+  names: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
 };
 
 export default App;
