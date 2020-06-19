@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from './app.jsx';
+import MoviesList from "./movies-list.jsx";
 
 const movies = [
   {
@@ -17,10 +17,13 @@ const movies = [
   }
 ];
 
-describe(`App snapshot`, () => {
-  it(`App renderer`, () => {
+const handleMovieCardEnter = jest.fn();
+const handleMovieTitleClick = jest.fn();
+
+describe(`MoviesList snapshot`, () => {
+  it(`MoviesList renderer`, () => {
     const tree = renderer
-      .create(<App movies={movies}/>)
+      .create(<MoviesList movies={movies} onMovieCardEnter={handleMovieCardEnter} onMovieTitleClick={handleMovieTitleClick} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();

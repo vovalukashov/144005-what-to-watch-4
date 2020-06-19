@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import MoviesList from "../movies-list/movies-list.jsx";
 
-const Main = ({names, onFilmTitleClick}) => {
+const Main = ({movies, onMovieTitleClick}) => {
+
   return (
     <>
       <section className={`movie-card`}>
@@ -95,18 +97,7 @@ const Main = ({names, onFilmTitleClick}) => {
             </li>
           </ul>
 
-          <div className="catalog__movies-list">
-            {names && names.map((name) => (
-              <article className="small-movie-card catalog__movies-card" key={name}>
-                <div className="small-movie-card__image">
-                  <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175"/>
-                </div>
-                <h3 className="small-movie-card__title" onClick={onFilmTitleClick}>
-                  <a className="small-movie-card__link" href="movie-page.html">{name}</a>
-                </h3>
-              </article>)
-            )}
-          </div>
+          <MoviesList movies={movies} onMovieTitleClick={onMovieTitleClick}/>
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -132,8 +123,8 @@ const Main = ({names, onFilmTitleClick}) => {
 };
 
 Main.propTypes = {
-  names: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  onFilmTitleClick: PropTypes.func.isRequired
+  movies: PropTypes.array.isRequired,
+  onMovieTitleClick: PropTypes.func.isRequired,
 };
 
 export default Main;
