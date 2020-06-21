@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import MoviesList from "../movies-list/movies-list.jsx";
 
-const Main = ({movies, onMovieTitleClick}) => {
-
+const Main = ({movies, onMovieCardClick}) => {
   return (
     <>
       <section className={`movie-card`}>
@@ -97,7 +96,7 @@ const Main = ({movies, onMovieTitleClick}) => {
             </li>
           </ul>
 
-          <MoviesList movies={movies} onMovieTitleClick={onMovieTitleClick}/>
+          <MoviesList movies={movies} onMovieCardClick={onMovieCardClick}/>
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -124,7 +123,7 @@ const Main = ({movies, onMovieTitleClick}) => {
 
 Main.propTypes = {
   movies: PropTypes.array.isRequired,
-  onMovieTitleClick: PropTypes.func.isRequired,
+  onMovieCardClick: PropTypes.func.isRequired,
 };
 
 export default Main;

@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import MovieCard from "./movie-card";
+import MovieInfo from "./movie-info.jsx";
 
 const movie = {
   name: `Сияние`,
@@ -17,13 +17,10 @@ const movie = {
   overlay: `https://cdn.shopify.com/s/files/1/1416/8662/products/shining_1980_photobusta_6_original_film_art_2000x.jpg?v=1569118744`,
 };
 
-const handleMovieCardEnter = jest.fn();
-const handleMovieCardClick = jest.fn();
-
-describe(`MoviesList snapshot`, () => {
-  it(`MoviesList renderer`, () => {
+describe(`MovieInfo snapshot`, () => {
+  it(`MovieInfo renderer`, () => {
     const tree = renderer
-      .create(<MovieCard movie={movie} onMovieCardEnter={handleMovieCardEnter} onMovieCardClick={handleMovieCardClick} />)
+      .create(<MovieInfo movie={movie} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
