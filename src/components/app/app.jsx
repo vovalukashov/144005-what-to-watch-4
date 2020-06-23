@@ -2,16 +2,16 @@ import React from "react";
 import Main from "../main/main.jsx";
 import PropTypes from "prop-types";
 
-const handleFilmTitleClick = () => {};
+const App = ({movies}) => {
+  const handleMovieTitleClick = () => {};
 
-const App = ({names}) => {
   return (
-    <Main names={names} onFilmTitleClick={handleFilmTitleClick}/>
+    <Main movies={movies} onMovieTitleClick={handleMovieTitleClick} />
   );
 };
 
 App.propTypes = {
-  names: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
+  movies: PropTypes.array.isRequired
 };
 
 export default App;

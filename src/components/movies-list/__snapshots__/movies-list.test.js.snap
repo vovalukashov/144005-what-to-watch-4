@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviesList snapshot MoviesList renderer 1`] = `
+<div
+  className="catalog__movies-list"
+>
+  <article
+    className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+  >
+    <div
+      className="small-movie-card__image"
+    >
+      <img
+        alt="Fantastic Beasts: The Crimes of Grindelwald"
+        height="175"
+        src="https://birdinflight.imgix.net/wp-content/uploads/2018/06/shining-sequel-movie_cover.jpg?fm=pjpg&q=70&fit=crop&crop=faces&w=630&h=446"
+        width="280"
+      />
+    </div>
+    <h3
+      className="small-movie-card__title"
+      onClick={[MockFunction]}
+    >
+      <a
+        className="small-movie-card__link"
+        href="movie-page.html"
+      >
+        Сияние
+      </a>
+    </h3>
+  </article>
+  <article
+    className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+  >
+    <div
+      className="small-movie-card__image"
+    >
+      <img
+        alt="Fantastic Beasts: The Crimes of Grindelwald"
+        height="175"
+        src="https://birdinflight.imgix.net/wp-content/uploads/2018/06/shining-sequel-movie_cover.jpg?fm=pjpg&q=70&fit=crop&crop=faces&w=630&h=446"
+        width="280"
+      />
+    </div>
+    <h3
+      className="small-movie-card__title"
+      onClick={[MockFunction]}
+    >
+      <a
+        className="small-movie-card__link"
+        href="movie-page.html"
+      >
+        Берегись автомобиля
+      </a>
+    </h3>
+  </article>
+  <article
+    className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+  >
+    <div
+      className="small-movie-card__image"
+    >
+      <img
+        alt="Fantastic Beasts: The Crimes of Grindelwald"
+        height="175"
+        src="https://birdinflight.imgix.net/wp-content/uploads/2018/06/shining-sequel-movie_cover.jpg?fm=pjpg&q=70&fit=crop&crop=faces&w=630&h=446"
+        width="280"
+      />
+    </div>
+    <h3
+      className="small-movie-card__title"
+      onClick={[MockFunction]}
+    >
+      <a
+        className="small-movie-card__link"
+        href="movie-page.html"
+      >
+        Солярис
+      </a>
+    </h3>
+  </article>
+</div>
+`;

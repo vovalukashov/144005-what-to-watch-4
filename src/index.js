@@ -1,12 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
-
-const films = {
-  names: [`Сияние`, `Берегись автомобиля`, `Солярис`]
-};
+import moviesMocks from "./mocks/movies.js";
 
 ReactDOM.render(
-    <App names={films.names} />,
+    <App movies={moviesMocks} />,
     document.querySelector(`#root`)
 );
