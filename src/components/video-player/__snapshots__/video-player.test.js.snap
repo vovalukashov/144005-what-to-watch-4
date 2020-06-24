@@ -2,6 +2,7 @@
 
 exports[`VideoPlayer snapshot VideoPlayer renderer 1`] = `
 <video
+<<<<<<< HEAD
   muted={true}
   poster="https://images-na.ssl-images-amazon.com/images/I/81nwnHTcV2L._AC_SY679_.jpg"
   src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
@@ -14,4 +15,21 @@ exports[`VideoPlayer snapshot VideoPlayer renderer 1`] = `
   }
   timeout={1000}
 />
+=======
+  height="175"
+  muted={true}
+  poster="https://images-na.ssl-images-amazon.com/images/I/81nwnHTcV2L._AC_SY679_.jpg"
+  style={
+    Object {
+      "objectFit": "cover",
+    }
+  }
+  width="280"
+>
+  <source
+    src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+    type="video/mp4"
+  />
+</video>
+>>>>>>> a8cf2be... add VideoPlayer component
 `;
