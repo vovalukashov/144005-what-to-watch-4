@@ -34,7 +34,7 @@ class App extends PureComponent {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path={`/`}>
+          <Route exact path="/">
             {this._renderApp()}
           </Route>
           <Route exact path={`/dev-movie`}>

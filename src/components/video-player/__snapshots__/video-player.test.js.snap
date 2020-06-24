@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoPlayer snapshot VideoPlayer renderer 1`] = `
+<video
+  muted={true}
+  poster="https://images-na.ssl-images-amazon.com/images/I/81nwnHTcV2L._AC_SY679_.jpg"
+  src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+  style={
+    Object {
+      "height": "175px",
+      "objectFit": "cover",
+      "width": "280px",
+    }
+  }
+  timeout={1000}
+/>
+`;
