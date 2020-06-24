@@ -6,6 +6,7 @@ exports[`MoviesList snapshot MoviesList renderer 1`] = `
 >
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -14,13 +15,12 @@ exports[`MoviesList snapshot MoviesList renderer 1`] = `
       <img
         alt="Fantastic Beasts: The Crimes of Grindelwald"
         height="175"
-        src="https://birdinflight.imgix.net/wp-content/uploads/2018/06/shining-sequel-movie_cover.jpg?fm=pjpg&q=70&fit=crop&crop=faces&w=630&h=446"
+        src="https://resizing.flixster.com/hfmSxiWV1FlY5vtodiys3hYXPic=/fit-in/200x296.2962962962963/v1.bTsxMTE2ODAzMjtqOzE4NTM0OzEyMDA7ODAwOzEyMDA"
         width="280"
       />
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[MockFunction]}
     >
       <a
         className="small-movie-card__link"
@@ -32,6 +32,7 @@ exports[`MoviesList snapshot MoviesList renderer 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onClick={[Function]}
     onMouseEnter={[Function]}
   >
     <div
@@ -40,45 +41,18 @@ exports[`MoviesList snapshot MoviesList renderer 1`] = `
       <img
         alt="Fantastic Beasts: The Crimes of Grindelwald"
         height="175"
-        src="https://birdinflight.imgix.net/wp-content/uploads/2018/06/shining-sequel-movie_cover.jpg?fm=pjpg&q=70&fit=crop&crop=faces&w=630&h=446"
+        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQLEjL1jwN96kDrqosLwz4q1Zr35469CecN5KKHLkqpebEj4W3i"
         width="280"
       />
     </div>
     <h3
       className="small-movie-card__title"
-      onClick={[MockFunction]}
     >
       <a
         className="small-movie-card__link"
         href="movie-page.html"
       >
         Берегись автомобиля
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseEnter={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <img
-        alt="Fantastic Beasts: The Crimes of Grindelwald"
-        height="175"
-        src="https://birdinflight.imgix.net/wp-content/uploads/2018/06/shining-sequel-movie_cover.jpg?fm=pjpg&q=70&fit=crop&crop=faces&w=630&h=446"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-      onClick={[MockFunction]}
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Солярис
       </a>
     </h3>
   </article>

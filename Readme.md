@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть» [![Build status][travis-image]][travis-url]
 
 * Студент: [Вова Лукашов](https://up.htmlacademy.ru/react/4/user/144005).
-* Наставник: [Николай Папаха](https://htmlacademy.ru/profile/id1224641).
+* Наставник: [Олег Липский](https://htmlacademy.ru/profile/id43358).
 
 ---
 
