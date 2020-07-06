@@ -12,6 +12,7 @@ export default [
     image: `https://resizing.flixster.com/hfmSxiWV1FlY5vtodiys3hYXPic=/fit-in/200x296.2962962962963/v1.bTsxMTE2ODAzMjtqOzE4NTM0OzEyMDA7ODAwOzEyMDA`,
     poster: `https://images-na.ssl-images-amazon.com/images/I/81nwnHTcV2L._AC_SY679_.jpg`,
     overlay: `https://cdn.shopify.com/s/files/1/1416/8662/products/shining_1980_photobusta_6_original_film_art_2000x.jpg?v=1569118744`,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   },
   {
     name: `Beware of the car`,
@@ -26,6 +27,7 @@ export default [
     image: `https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQLEjL1jwN96kDrqosLwz4q1Zr35469CecN5KKHLkqpebEj4W3i`,
     poster: `https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/059f510a-1fc7-49a6-bd73-87dc11095516/x1000`,
     overlay: `https://upload.wikimedia.org/wikipedia/ru/0/04/1966_beregis_avtomobilya.jpg`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     name: `Solaris`,
@@ -40,6 +42,7 @@ export default [
     image: `https://resizing.flixster.com/GVOkRU9lBo7qh3LsJoCXVZQwG2w=/206x305/v1.bTsxMTIxMzQ3OTtqOzE4NTM0OzEyMDA7MTUyNjsyMTU2`,
     poster: `https://i.pinimg.com/originals/8d/a8/09/8da80905fcaf871343bd35e142496f2c.jpg`,
     overlay: `https://sun9-36.userapi.com/c847018/v847018151/1405ed/3qLuyL2sP74.jpg`,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   },
   {
     name: `Rear Window`,
@@ -53,7 +56,8 @@ export default [
     starring: `James Stewart, Grace Kelly, Wendell Corey`,
     image: `https://resizing.flixster.com/c0aIVhWXUcJvEOXM9sN5yjEiAVs=/206x305/v1.bTsxMTE3NzgwNTtqOzE4NTM0OzEyMDA7ODAwOzEyMDA`,
     poster: `https://upload.wikimedia.org/wikipedia/commons/b/b3/Rear_Window_film_poster.png`,
-    overlay: `https://product-image.juniqe-production.juniqe.com/media/catalog/product/seo-cache/x800/44/28/44-28-101P/Rear-Window-Calm-The-Ham-Poster.jpg`
+    overlay: `https://product-image.juniqe-production.juniqe.com/media/catalog/product/seo-cache/x800/44/28/44-28-101P/Rear-Window-Calm-The-Ham-Poster.jpg`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     name: `The Dead Don't Die`,
@@ -67,7 +71,8 @@ export default [
     starring: `Bill Murray, Adam Driver, Tom Waits`,
     image: `https://resizing.flixster.com/SfB233GQ4hXStdpXwFDhDjdW7dk=/fit-in/200x296.2962962962963/v1.bTsxMzAzNjM2NjtqOzE4NDY1OzEyMDA7ODY0OzEyODA`,
     poster: `https://upload.wikimedia.org/wikipedia/ru/a/ae/The_Dead_Don%27t_Die_%28film%2C_2019%29.jpg`,
-    overlay: `https://dailydead.com/wp-content/uploads/2019/04/Dead-Dont-Die-1000-01.jpg`
+    overlay: `https://dailydead.com/wp-content/uploads/2019/04/Dead-Dont-Die-1000-01.jpg`,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   },
   {
     name: `Gran Torino`,
@@ -81,7 +86,8 @@ export default [
     starring: `Clint Eastwood, Bee Vang, Christopher Carley`,
     image: `https://resizing.flixster.com/QdRKqgqno4N8DfISoq-YtPsBpD8=/206x305/v1.bTsxMTE3MDAyOTtqOzE4NTM0OzEyMDA7ODAwOzEyMDA`,
     poster: `https://st.kp.yandex.net/im/poster/3/3/4/kinopoisk.ru-Gran-Torino-3343514.jpg`,
-    overlay: `https://cdn.traileraddict.com/content/warner-bros-pictures/gran_torino-2.jpg`
+    overlay: `https://cdn.traileraddict.com/content/warner-bros-pictures/gran_torino-2.jpg`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     name: `Inception`,
@@ -95,7 +101,8 @@ export default [
     starring: `Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page`,
     image: `https://resizing.flixster.com/IIqJ4gYLfBEPH-JUZ_g9kxVdils=/206x305/v1.bTsxMTE2NjcyNTtqOzE4NTM0OzEyMDA7ODAwOzEyMDA`,
     poster: `https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg`,
-    overlay: `https://2.bp.blogspot.com/_o31CLSHm6KA/TA8B2Cp026I/AAAAAAAAAFM/Je4jEiWYRWo/s1600/Inception+banner+1.jpg`
+    overlay: `https://2.bp.blogspot.com/_o31CLSHm6KA/TA8B2Cp026I/AAAAAAAAAFM/Je4jEiWYRWo/s1600/Inception+banner+1.jpg`,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   },
   {
     name: `Snatch`,
@@ -109,6 +116,7 @@ export default [
     starring: `Jason Statham, Brad Pitt, Benicio Del Toro`,
     image: `https://resizing.flixster.com/T1Ho-Ae9ZCEY2kIPFkhkyVZkxo4=/fit-in/200x296.2962962962963/v1.bTsxMTE3NjY3NTtqOzE4NTM0OzEyMDA7ODAwOzEyMDA`,
     poster: `https://m.media-amazon.com/images/M/MV5BMTA2NDYxOGYtYjU1Mi00Y2QzLTgxMTQtMWI1MGI0ZGQ5MmU4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SY1000_SX684_AL_.jpg`,
-    overlay: `https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/42d50c65-644c-4082-93de-4f16eba38d5c/d30zxxs-6a68056c-1a87-4bfb-bd15-d93408abb2bb.jpg/v1/fill/w_900,h_637,q_75,strp/snatch_poster_by_adivasiliu_d30zxxs-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD02MzciLCJwYXRoIjoiXC9mXC80MmQ1MGM2NS02NDRjLTQwODItOTNkZS00ZjE2ZWJhMzhkNWNcL2QzMHp4eHMtNmE2ODA1NmMtMWE4Ny00YmZiLWJkMTUtZDkzNDA4YWJiMmJiLmpwZyIsIndpZHRoIjoiPD05MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.le46kDkBLrCBU3IYIuyq9St9oSRg1FPhXeZhJ_QTbHI`
+    overlay: `https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/42d50c65-644c-4082-93de-4f16eba38d5c/d30zxxs-6a68056c-1a87-4bfb-bd15-d93408abb2bb.jpg/v1/fill/w_900,h_637,q_75,strp/snatch_poster_by_adivasiliu_d30zxxs-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD02MzciLCJwYXRoIjoiXC9mXC80MmQ1MGM2NS02NDRjLTQwODItOTNkZS00ZjE2ZWJhMzhkNWNcL2QzMHp4eHMtNmE2ODA1NmMtMWE4Ny00YmZiLWJkMTUtZDkzNDA4YWJiMmJiLmpwZyIsIndpZHRoIjoiPD05MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.le46kDkBLrCBU3IYIuyq9St9oSRg1FPhXeZhJ_QTbHI`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
 ];
