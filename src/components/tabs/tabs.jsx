@@ -4,16 +4,12 @@ import PropTypes from "prop-types";
 class Tabs extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = {
-      tabActive: `overview`
-    };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick(tab, e) {
     e.preventDefault();
-    this.setState({
-      tabActive: tab
-    });
+    const {onTabClick} = this.props;
+    onTabClick(tab);
   }
   renderReview(review) {
     const {textReview, authorReview, dateReview, ratingReview} = review;
@@ -32,24 +28,25 @@ class Tabs extends PureComponent {
     );
   }
   render() {
-    const {genre, release, rating, ratingText, ratingCount, text, director, starring, runTime, reviews} = this.props.movie;
+    const {movie, tabActive} = this.props;
+    const {genre, release, rating, ratingText, ratingCount, text, director, starring, runTime, reviews} = movie;
     return (
       <div className="movie-card__desc">
         <nav className="movie-nav movie-card__nav">
           <ul className="movie-nav__list">
-            <li className={`movie-nav__item ${this.state.tabActive === `overview` && `movie-nav__item--active`}`}>
+            <li className={`movie-nav__item ${tabActive === `overview` && `movie-nav__item--active`}`}>
               <a href="#" className="movie-nav__link" onClick={this.handleClick.bind(this, `overview`)}>Overview</a>
             </li>
-            <li className={`movie-nav__item ${this.state.tabActive === `details` && `movie-nav__item--active`}`}>
+            <li className={`movie-nav__item ${tabActive === `details` && `movie-nav__item--active`}`}>
               <a href="#" className="movie-nav__link" onClick={this.handleClick.bind(this, `details`)}>Details</a>
             </li>
-            <li className={`movie-nav__item ${this.state.tabActive === `reviews` && `movie-nav__item--active`}`}>
+            <li className={`movie-nav__item ${tabActive === `reviews` && `movie-nav__item--active`}`}>
               <a href="#" className="movie-nav__link" onClick={this.handleClick.bind(this, `reviews`)}>Reviews</a>
             </li>
           </ul>
         </nav>
 
-        {this.state.tabActive === `overview` && (
+        {tabActive === `overview` && (
           <>
             <div className="movie-rating">
               <div className="movie-rating__score">{rating}</div>
@@ -68,7 +65,7 @@ class Tabs extends PureComponent {
             </div>
           </>
         )}
-        {this.state.tabActive === `details` && (
+        {tabActive === `details` && (
           <div className="movie-card__text movie-card__row">
             <div className="movie-card__text-col">
               <p className="movie-card__details-item">
@@ -97,7 +94,7 @@ class Tabs extends PureComponent {
             </div>
           </div>
         )}
-        {this.state.tabActive === `reviews` && (
+        {tabActive === `reviews` && (
           <div className="movie-card__reviews movie-card__row">
             <div className="movie-card__reviews-col">
               {reviews.map((review, i) => (i <= 2) && this.renderReview(review))}
@@ -128,6 +125,8 @@ Tabs.propTypes = {
     runTime: PropTypes.string.isRequired,
     reviews: PropTypes.array.isRequired,
   }).isRequired,
+  tabActive: PropTypes.string.isRequired,
+  onTabClick: PropTypes.func.isRequired
 };
 
 export default Tabs;

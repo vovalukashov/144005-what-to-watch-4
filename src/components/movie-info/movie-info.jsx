@@ -7,11 +7,22 @@ class MovieInfo extends PureComponent {
   constructor(props) {
     super(props);
     const {movie, movies} = this.props;
+    this.state = {
+      tabActive: `overview`
+    };
     this.relatedMovies = movies
       .filter((moviesItem) => moviesItem.genre.split(`, `)
         .filter((genre) => movie.genre.includes(genre)))
       .slice(0, 3);
+    this.handleTabClick = this.handleTabClick.bind(this);
   }
+
+  handleTabClick(tab) {
+    this.setState({
+      tabActive: tab
+    });
+  }
+
   render() {
     const {movie, onMovieCardClick} = this.props;
     const {name, genre, release, poster, overlay} = movie;
@@ -74,7 +85,7 @@ class MovieInfo extends PureComponent {
                 <img src={poster} alt={`${name} poster`} width="218" height="327"/>
               </div>
 
-              <Tabs movie={movie} />
+              <Tabs movie={movie} tabActive={this.state.tabActive} onTabClick={this.handleTabClick} />
             </div>
           </div>
         </section>

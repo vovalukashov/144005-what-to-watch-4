@@ -1,7 +1,7 @@
 import React from "react";
 import Enzime, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import MovieCard from "./movie-card.jsx";
+import Tabs from "./tabs.jsx";
 
 Enzime.configure({
   adapter: new Adapter()
@@ -38,44 +38,19 @@ const movie = {
   ],
 };
 
-describe(`MovieCard e2e`, () => {
-  const handleMovieCardEnter = jest.fn();
-  const handleMovieCardLeave = jest.fn();
-  const handleMovieCardClick = jest.fn();
-  it(`should the data be passed by card mouse enter?`, () => {
-    const movieCard = shallow(
-        <MovieCard movie={movie} onMovieCardEnter={handleMovieCardEnter} onMovieCardLeave={handleMovieCardLeave} onMovieCardClick={handleMovieCardClick} />
+describe(`Tabs e2e`, () => {
+  it(`should have clicked the tab?`, () => {
+    const e = {preventDefault: () => {}};
+    const handleTabClick = jest.fn();
+
+    const tabs = shallow(
+        <Tabs movie={movie} tabActive={`overview`} onTabClick={handleTabClick} />
     );
 
-    const movieCardParent = movieCard.find(`.small-movie-card`);
-    movieCardParent.simulate(`mouseenter`, movie);
+    const tabsNav = tabs.find(`.movie-nav__link`);
+    tabsNav.forEach((tabNav) => tabNav.simulate(`click`, e, `overview`));
 
-    expect(handleMovieCardEnter).toHaveBeenCalledTimes(1);
-    expect(handleMovieCardEnter.mock.calls[0][0]).toMatchObject(movie);
-  });
-
-  it(`should the data be passed by card mouse leave?`, () => {
-    const movieCard = shallow(
-        <MovieCard movie={movie} onMovieCardEnter={handleMovieCardEnter} onMovieCardLeave={handleMovieCardLeave} onMovieCardClick={handleMovieCardClick} />
-    );
-
-    const movieCardParent = movieCard.find(`.small-movie-card`);
-    movieCardParent.simulate(`mouseleave`);
-
-    expect(handleMovieCardEnter).toHaveBeenCalledTimes(1);
-  });
-
-  it(`should the data be passed by card click?`, () => {
-    const movieCard = shallow(
-        <MovieCard movie={movie} onMovieCardEnter={handleMovieCardEnter} onMovieCardLeave={handleMovieCardLeave} onMovieCardClick={handleMovieCardClick} />
-    );
-
-    const movieCardParent = movieCard.find(`.small-movie-card`);
-    movieCardParent.simulate(`click`);
-
-    expect(handleMovieCardClick).toHaveBeenCalledTimes(1);
-    expect(handleMovieCardClick.mock.calls[0][0]).toMatchObject(movie);
+    expect(handleTabClick).toHaveBeenCalledTimes(tabsNav.length);
+    expect(handleTabClick.mock.calls[0][0]).toMatch(`overview`);
   });
 });
-
-
