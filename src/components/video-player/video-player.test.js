@@ -10,7 +10,6 @@ const playerProps = {
   style: {objectFit: `cover`, width: `280px`, height: `175px`}
 };
 
-
 describe(`VideoPlayer snapshot`, () => {
   it(`VideoPlayer renderer`, () => {
     const tree = renderer

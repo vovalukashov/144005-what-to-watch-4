@@ -23,7 +23,7 @@ class App extends PureComponent {
   _renderApp() {
     const {movies} = this.props;
     if (this.state.activeMovie) {
-      return <MovieInfo movie={this.state.activeMovie} />;
+      return <MovieInfo movie={this.state.activeMovie} movies={movies} onMovieCardClick={this.handleMovieCardClick} />;
     }
 
     return <Main movies={movies} onMovieCardClick={this.handleMovieCardClick} />;
@@ -32,13 +32,14 @@ class App extends PureComponent {
   render() {
     const {movies} = this.props;
     return (
+
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
             {this._renderApp()}
           </Route>
           <Route exact path={`/dev-movie`}>
-            <MovieInfo movie={movies[0]} />
+            <MovieInfo movie={movies[0]} movies={movies} onMovieCardClick={this.handleMovieCardClick}/>
           </Route>
         </Switch>
       </BrowserRouter>
