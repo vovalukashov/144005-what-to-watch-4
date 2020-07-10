@@ -9,8 +9,10 @@ class App extends PureComponent {
   constructor(props) {
     super(props);
     this.handleMovieCardClick = this.handleMovieCardClick.bind(this);
+    this.handleGenreClick = this.handleGenreClick.bind(this);
     this.state = {
-      activeMovie: null
+      activeMovie: null,
+      activeGenre: 'All genres'
     };
   }
 
@@ -20,13 +22,19 @@ class App extends PureComponent {
     });
   }
 
+  handleGenreClick(genre) {
+    this.setState({
+      activeGenre: genre
+    });
+  }
+
   _renderApp() {
     const {movies} = this.props;
     if (this.state.activeMovie) {
       return <MovieInfo movie={this.state.activeMovie} movies={movies} onMovieCardClick={this.handleMovieCardClick} />;
     }
 
-    return <Main movies={movies} onMovieCardClick={this.handleMovieCardClick} />;
+    return <Main movies={movies} onMovieCardClick={this.handleMovieCardClick} onGenreClick={this.handleGenreClick} activeGenre={this.state.activeGenre} />;
   }
 
   render() {
