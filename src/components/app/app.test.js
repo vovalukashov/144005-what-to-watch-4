@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import App from './app.jsx';
+import {App} from './app.jsx';
 
 const movies = [
   {
@@ -64,11 +64,13 @@ const movies = [
     ],
   },
 ];
+const genre = `All Genres`;
+const onGenreClick = jest.fn();
 
 describe(`App snapshot`, () => {
   it(`App renderer`, () => {
     const tree = renderer
-      .create(<App movies={movies}/>)
+      .create(<App movies={movies} genre={genre} onGenreClick={onGenreClick}/>)
       .toJSON();
 
     expect(tree).toMatchSnapshot();

@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import MoviesList from "../movies-list/movies-list.jsx";
-import GenresList from "../genres-list/ginres-list.jsx";
+import GenresList from "../genres-list/genres-list.jsx";
 
-const Main = ({movies, onMovieCardClick, onGenreClick, activeGenre}) => {
+const Main = ({movies, genre, onGenreClick, onMovieCardClick}) => {
   return (
     <>
       <section className={`movie-card`}>
@@ -64,7 +64,7 @@ const Main = ({movies, onMovieCardClick, onGenreClick, activeGenre}) => {
         <section className="catalog">
           <h2 className="catalog__title visually-hidden">Catalog</h2>
 
-          <GenresList movies={movies} onGenreClick={onGenreClick} activeGenre={activeGenre} />
+          <GenresList movies={movies} onGenreClick={onGenreClick} genre={genre} />
 
           <MoviesList movies={movies} onMovieCardClick={onMovieCardClick}/>
 
@@ -93,6 +93,8 @@ const Main = ({movies, onMovieCardClick, onGenreClick, activeGenre}) => {
 
 Main.propTypes = {
   movies: PropTypes.array.isRequired,
+  genre: PropTypes.string.isRequired,
+  onGenreClick: PropTypes.func.isRequired,
   onMovieCardClick: PropTypes.func.isRequired,
 };
 

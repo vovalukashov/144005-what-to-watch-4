@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Main from './main.jsx';
+import GenresList from "./genres-list.jsx";
 
 const movies = [
   {
@@ -36,12 +36,11 @@ const movies = [
 ];
 const genre = `All Genres`;
 const onGenreClick = jest.fn();
-const handleMovieCardClick = jest.fn();
 
-describe(`Main snapshot`, () => {
-  it(`Main renderer`, () => {
+describe(`GenresList snapshot`, () => {
+  it(`GenresList renderer`, () => {
     const tree = renderer
-      .create(<Main movies={movies} genre={genre} onGenreClick={onGenreClick} onMovieCardClick={handleMovieCardClick} />)
+      .create(<GenresList movies={movies} genre={genre} onGenreClick={onGenreClick} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();

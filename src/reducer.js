@@ -21,7 +21,7 @@ const ActionCreator = {
   getMovies: (genre) => {
     return {
       type: ActionType.GET_GENRE_MOVIES,
-      payload: movies.filter((moviesItem) => moviesItem.genre.includes(genre))
+      payload: genre !== `All genres` ? movies.filter((moviesItem) => moviesItem.genre.includes(genre)) : movies
     };
   }
 };

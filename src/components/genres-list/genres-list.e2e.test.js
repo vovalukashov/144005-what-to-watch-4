@@ -1,6 +1,11 @@
 import React from "react";
-import renderer from "react-test-renderer";
-import Main from './main.jsx';
+import Enzime, {shallow} from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+import GenresList from "./genres-list.jsx";
+
+Enzime.configure({
+  adapter: new Adapter()
+});
 
 const movies = [
   {
@@ -34,16 +39,35 @@ const movies = [
     preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   },
 ];
-const genre = `All Genres`;
-const onGenreClick = jest.fn();
-const handleMovieCardClick = jest.fn();
+const genre = `All genres`;
+const e = {preventDefault: () => {}};
 
-describe(`Main snapshot`, () => {
-  it(`Main renderer`, () => {
-    const tree = renderer
-      .create(<Main movies={movies} genre={genre} onGenreClick={onGenreClick} onMovieCardClick={handleMovieCardClick} />)
-      .toJSON();
+describe(`GenresList e2e`, () => {
+  it(`should the data be passed by genre click?`, () => {
+    const onGenreClick = jest.fn();
+    const genresList = shallow(
+        <GenresList movies={movies} genre={genre} onGenreClick={onGenreClick} />
+    );
 
-    expect(tree).toMatchSnapshot();
+    const genreItems = genresList.find(`.catalog__genres-item`);
+    genreItems.forEach((genreItem) => genreItem.simulate(`click`, e, genre));
+
+    expect(onGenreClick).toHaveBeenCalledTimes(genreItems.length);
+    expect(onGenreClick.mock.calls[0][0]).toMatch(genre);
+  });
+
+  it(`should active class be added by genre click?`, () => {
+    const onGenreClick = jest.fn();
+    const genresList = shallow(
+        <GenresList movies={movies} genre={genre} onGenreClick={onGenreClick} />
+    );
+
+    const genreItem = genresList.find(`.catalog__genres-item`).first();
+    genreItem.simulate(`click`, e);
+
+    expect(onGenreClick).toHaveBeenCalledTimes(1);
+    expect(genreItem.hasClass(`catalog__genres-item--active`)).toBe(true);
   });
 });
+
+
