@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import {Switch, Route, BrowserRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import MovieInfo from "../movie-info/movie-info.jsx";
-import {ActionCreator} from "../../reducer";
+import {ActionCreator} from "../../reducer/reducer.js";
 
 class App extends PureComponent {
   constructor(props) {

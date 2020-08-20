@@ -1,5 +1,5 @@
-import {extend} from "./utils.js";
-import movies from "./mocks/movies.js";
+import {extend} from "../utils.js";
+import movies from "../mocks/movies.js";
 
 const initialState = {
   genre: `All genres`,
